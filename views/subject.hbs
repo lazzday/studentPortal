@@ -1,5 +1,12 @@
 {{# each resources }}
-    Product!
-
+    <div class="card">
+        <h5 class="card-header">{{this.title}}</h5>
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">Uploaded By: {{this.uploader}}</p>
+            <p>Date: {{this.date}}</p>
+            <a href="{{this.filePath}}{{this.fileName}}" download="{{this.filePath}}{{this.fileName}}" class="btn btn-primary">Download</a>
+        </div>
+    </div>
 {{/each}}
 

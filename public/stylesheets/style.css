@@ -24,7 +24,7 @@ a {
   font-size: larger;
 }
 
-.container {
+.homepage {
   padding: 10px;
 }
 
@@ -34,3 +34,13 @@ a {
 /*.col-sm-6 col-md-3 {*/
   /*padding: 10px;*/
 /*}*/
+
+/*div >.timetable {*/
+  /*width: 100vw;*/
+  /*padding: 5px;*/
+/*}*/
+
+.timetable img{
+  max-width: 99%;
+  padding-top: 5px;
+}
