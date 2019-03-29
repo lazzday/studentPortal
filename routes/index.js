@@ -3,26 +3,20 @@ var router = express.Router();
 var LearningResource = require('../models/learningResource');
 
 
-var receivedURL = "";
-
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  console.log(req.url);
-  res.render('index', { title: 'Noodle Home' });
+router.get('/', function (req, res, next) {
+    console.log(req.url);
+    res.render('index', {title: 'Noodle Home'});
 });
 
 
-
 /* GET individual subject page*/
-router.get('/*', function (req, res, next) {
-  console.log(req.url);
-  if (req.url.includes("/upload")){
-    // insert upload code
-  } else if (req.url.includes("/user")) {
-    // insert user account code
-  } else {
-    res.render('subject', {title: 'Subject'});
-  }
+router.get('/module_*', function (req, res, next) {
+    var urlStrings = req.url.split('_');
+    var subject = urlStrings[urlStrings.length - 1];
+    LearningResource.find({'subject': subject}, function (err, docs) {
+        res.render('subject', {title: subject, resources: docs});
+    });
 });
 
 module.exports = router;

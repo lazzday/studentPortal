@@ -12,7 +12,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 
-mongoose.connect('mongodb://localhost:27017/learning/resources');
+mongoose.connect('mongodb://localhost:27017/learning');
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));

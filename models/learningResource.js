@@ -10,4 +10,4 @@ var schema = new Schema({
     date: {type: String, required: true}
 });
 
-module.exports = mongoose.model('LearningResources', schema);
+module.exports = mongoose.model('LearningResource', schema);
