@@ -11,7 +11,6 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-
 mongoose.connect('mongodb://localhost:27017/learning');
 
 // view engine setup
