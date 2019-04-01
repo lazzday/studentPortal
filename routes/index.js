@@ -32,8 +32,6 @@ const multerConfig = {
   storage: multer.diskStorage({
     destination: function(req, file, next){
     const filepath = req.body.module;
-    console.log(filepath);
-
     next(null, './public/resources/' + filepath);
    },
 
