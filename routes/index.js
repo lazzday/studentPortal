@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var LearningResource = require('../models/learningResource');
 
-
 /* GET home page. */
 router.get('/', function (req, res, next) {
     console.log(req.url);
@@ -25,5 +24,7 @@ router.get('/module_*', function (req, res, next) {
         res.render('subject', {title: subject, resources: docs});
     });
 });
+
+
 
 module.exports = router;
