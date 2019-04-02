@@ -20,7 +20,7 @@ router.get('/signup', function (req, res, next) {
 });
 
 /* GET User profile page. */
-router.get('/profile', isLoggedIn(), function (req, res, next) {
+router.get('/profile', isLoggedIn, function (req, res, next) {
   console.log(req.url);
   res.render('user/profile', {title: 'My Profile'});
 });
