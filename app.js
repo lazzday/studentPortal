@@ -16,7 +16,6 @@ var userRouter = require('./routes/users');
 
 var app = express();
 
-
 mongoose.connect('mongodb://localhost:27017/learning');
 require('./config/passport');
 

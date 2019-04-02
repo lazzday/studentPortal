@@ -1,0 +1,8 @@
+﻿ID,Course,Lecturer,Image
+cloud,Cloud Computing,Brian O'Shea,/images/cloud.jpg
+soft-eng,Software Engineering With Test,Paul Dunne,/images/software.jpg
+android,Mobile Android Development,Michael Murrat,/images/android.jpg
+dsp,Digital Signal Processing,Michelle Lynch,/images/dspjpg
+cpp,C++,Michelle Lynch,/images/cpp.jpg
+prof-eng,Professional Engineering,Des O'Reilly,/images/profeng.jpg
+project,Project Engineering, Niall O'Keeffe,/images/project.jpg
