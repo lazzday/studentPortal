@@ -1,52 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Software & Electronic Engineering</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<nav class="navbar navbar-expand-lg" style="background-color: rgba(255,0,29,0.76)">
+    <img src="/images/noodle2.png" href="/home" style="max-height: 3em">
+    <a class="navbar-brand" href="/home" style="font-family: Impact; color: white"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">
-            <i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
-      </li>
-      <!--<li class="nav-item">-->
-        <!--<a class="nav-link" href="#">Link</a>-->
-      <!--</li>-->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-book"></i> Modules
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/module_cloud">Cloud Computing</a>
-            <a class="dropdown-item" href="/module_sweng">Software Engineering with Test</a>
-            <a class="dropdown-item" href="/module_appdev">Mobile App Development</a>
-            <a class="dropdown-item" href="/module_dsp">DSP</a>
-            <a class="dropdown-item" href="/module_c++">C++ Programming</a>
-            <a class="dropdown-item" href="/module_proeng">The Professional Engineer</a>
-            <a class="dropdown-item" href="/module_project">Project Engineering</a>
-            <a class="dropdown-item" href="/module_misc">Miscellaneous</a>
-            <!--<div class="dropdown-divider"></div>-->
-          <!--<a class="dropdown-item" href="#">Something else here</a>-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home" style="color: white">
+                    <i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false" style="color: white">
+                    <i class="fas fa-book"></i> Modules
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/module_cloud">Cloud Computing</a>
+                    <a class="dropdown-item" href="/module_sweng">Software Engineering with Test</a>
+                    <a class="dropdown-item" href="/module_appdev">Mobile App Development</a>
+                    <a class="dropdown-item" href="/module_dsp">DSP</a>
+                    <a class="dropdown-item" href="/module_c++">C++ Programming</a>
+                    <a class="dropdown-item" href="/module_proeng">The Professional Engineer</a>
+                    <a class="dropdown-item" href="/module_project">Project Engineering</a>
+                    <a class="dropdown-item" href="/module_misc">Miscellaneous</a>
+                </div>
+            <li class="nav-item timetable">
+                <a class="nav-link" href="/timetable" style="color: white"><i class="far fa-calendar-alt"></i> Timetable<span
+                        class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item upload">
+                <a class="nav-link" href="/upload" style="color: white"><i class="fas fa-upload"></i> Upload<span
+                        class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="accountDropdown" role="button"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user-circle"></i> {{user}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                <a class="dropdown-item" href="/user/profile">User Profile</a>
+                <a class="dropdown-item" href="/user/logout">Log Out</a>
+            </div>
         </div>
-        <li class="nav-item timetable">
-            <a class="nav-link" href="/timetable"><i class="far fa-calendar-alt"></i> Timetable<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item timetable">
-            <a class="nav-link" href="/upload"><i class="fas fa-upload"></i> Upload<span class="sr-only">(current)</span></a>
-        </li>
-    </ul>
-      <a class="nav-link dropdown-toggle" href="#" id="navbarAccountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user-circle"></i> Account
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarAccountDropdown">
-          <a class="dropdown-item" href="/user/profile">User Profile</a>
-          <a class="dropdown-item" href="#">Log Out</a>
-
-      </div>
-    <!--<form class="form-inline my-2 my-lg-0">-->
-      <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
-      <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-    <!--</form>-->
-  </div>
+    </div>
 </nav>

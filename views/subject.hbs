@@ -1,10 +1,13 @@
 {{# each resources }}
-    <div class="card">
-        <h5 class="card-header">{{this.title}}</h5>
+    <div class="card" style="background-color: rgba(255,255,255,0.76); margin: 10px">
+        <div class="card-header">
+            <a class="float-left">{{this.date}}</a>
+            <a class="float-right">Uploaded by: {{this.uploader}}</a>
+        </div>
         <div class="card-body">
             <h5 class="card-title">{{this.title}}</h5>
-            <p class="card-text">Uploaded By: {{this.uploader}}</p>
-            <p>Date: {{this.date}}</p>
+            <!--<p class="card-text">Uploaded By: {{this.uploader}}</p>-->
+            <!--<p>Date: {{this.date}}</p>-->
             <a href="{{this.filePath}}{{this.fileName}}" download="{{this.filePath}}{{this.fileName}}" class="btn btn-primary">Download</a>
         </div>
     </div>
