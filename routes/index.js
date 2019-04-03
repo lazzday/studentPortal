@@ -4,9 +4,9 @@ var LearningResource = require('../models/learningResource');
 var multer = require('multer');
 var bodyParser = require('body-parser');
 const moment = require('moment')
-const uploadPath = './public/resources/';
-const filePath = 'uploads';
-var fileToUpload;
+const uploadPath = './public/resources';
+const filePath = '/uploads';
+var date;
 
 router.use(bodyParser.urlencoded({extended:false}));
 router.use(bodyParser.json());
@@ -22,7 +22,6 @@ router.get('/timetable', function (req, res, next) {
     console.log(req.url);
     res.render('timetable', {title: 'Timetable'});
 });
-
 
 /* GET individual subject page*/
 router.get('/module_*', function (req, res, next) {
@@ -68,7 +67,7 @@ const multerConfig = {
         newFile.title = file.fieldname;
         newFile.uploader = 'testuser';
         newFile.subject = req.body.module;
-        newFile.date = Date.now();
+        newFile.date = moment().format('L');
 
         newFile.save(function (error, result) {
           if(error){
@@ -82,10 +81,8 @@ const multerConfig = {
   }
 };
 
-router.post('/upload', multer(multerConfig).single('file'),function(req, res, next){
+router.post('/upload', multer(multerConfig).single('file'),function(req, res){
     res.send('Complete!');
-}
-
-);
+});
 
 module.exports = router;
