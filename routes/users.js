@@ -6,8 +6,6 @@ var passport = require("passport");
 var csrfProtection = csrf();
 router.use(csrfProtection);
 
-
-
 /* POST user signup*/
 router.post('/signup', passport.authenticate('local.signup', {
   successRedirect: '/home',

@@ -10,7 +10,6 @@ var passport =  require('passport');
 var flash = require('connect-flash');
 var validator = require('express-validator');
 
-
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 
