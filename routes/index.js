@@ -3,6 +3,7 @@ var router = express.Router();
 var LearningResource = require('../models/learningResource');
 var multer = require('multer');
 var bodyParser = require('body-parser');
+const moment = require('moment')
 const uploadPath = './public/resources/';
 const filePath = 'uploads';
 var fileToUpload;
@@ -50,8 +51,8 @@ const multerConfig = {
     filename: function(req, file, next){
       console.log(file);
       const fileName = file.originalname.split('.')[0]
-      const ext = file.mimetype.split('/')[1];
-      next(null, fileName + '-' + Date.now() + ".txt");
+      var date = moment().format('YYYYMMDDhhmmss');
+      next(null, fileName + '-' + date + ".txt");
     }
   }),
 
